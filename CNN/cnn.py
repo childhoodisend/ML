@@ -13,13 +13,14 @@ x_test = x_test.astype("float32") / 255
 
 x_train = np.expand_dims(x_train, -1)
 x_test = np.expand_dims(x_test, -1)
-print("x_train shape:", x_train.shape)
-print(x_train.shape[0], "train samples")
-print(x_test.shape[0], "test samples")
+print(x_train.shape, "train shape")
+print(x_test.shape, "test shape")
 
 
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
+print(y_train.shape, "y_train shape")
+print(y_test.shape, "y_test shape")
 
 # model = keras.Sequential(
 #     [
