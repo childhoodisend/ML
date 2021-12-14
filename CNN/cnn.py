@@ -2,7 +2,6 @@ import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
 
-
 num_classes = 10
 input_shape = (28, 28, 1)
 
@@ -16,7 +15,6 @@ x_train = np.expand_dims(x_train, -1)
 x_test = np.expand_dims(x_test, -1)
 print(x_train.shape, "train shape")
 print(x_test.shape, "test shape")
-
 
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
